@@ -65,7 +65,7 @@ object Functions extends App {
   def isPrimeFunction(n: Int): Boolean = {
     def isPrimeUntil(t: Int): Boolean = {
       if (t <= 1) true
-      else n % t != 0 && isPrimeUntil(t-1)
+      else isPrimeUntil(t-1) && n % t != 0
     }
 
     isPrimeUntil(n/2)
