@@ -50,7 +50,7 @@ object Functions extends App {
   println(aFactorialFunction(10))
 
   // 3. A Fibonacci function f(n) = f(n-1) + f(n-2), f(1) = f(2) = 1
-  def aFibonacciFunction(n: Int): Int = {
+  def aFibonacciFunction(n: Int): BigInt = {
     if (n <= 2) 1
     else aFibonacciFunction(n-1) + aFibonacciFunction(n-2)
   }
@@ -59,6 +59,7 @@ object Functions extends App {
   println(aFibonacciFunction(3))
   println(aFibonacciFunction(4))
   println(aFibonacciFunction(10))
+  println(aFibonacciFunction(50))   // long execution
 
   // 4. Check if a number is prime
   def isPrimeFunction(n: Int): Boolean = {
